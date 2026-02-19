@@ -1,18 +1,62 @@
-<h1>My Projects</h1>
+<section class="px-8 py-28 max-w-5xl mx-auto">
 
-<div *ngIf="projects$ | async as projects">
-  <div *ngFor="let project of projects" class="project-card">
-    <h2>{{ project.title }}</h2>
-    <p>{{ project.description }}</p>
+  <!-- Headline -->
+  <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+    Hi, I'm <span class="text-forest-600">Jonah Cantu</span>.
+  </h1>
 
-    <p><strong>Tech:</strong> {{ project.techStack.join(', ') }}</p>
+  <!-- Subheading -->
+  <p class="text-xl text-forest-200 mb-10 max-w-3xl">
+    Angular Developer specializing in scalable web applications 
+    using Firebase, Firestore, and modern TypeScript architecture.
+  </p>
 
-    <a [href]="project.githubUrl" target="_blank">GitHub</a>
+  <!-- CTA -->
+  <div class="flex gap-6">
+    <a routerLink="/projects"
+       class="bg-forest-700 hover:bg-forest-600 transition px-6 py-3 rounded-xl font-semibold">
+       View Projects
+    </a>
 
-    <span *ngIf="project.liveUrl">
-      | <a [href]="project.liveUrl" target="_blank">Live Demo</a>
-    </span>
-
-    <hr>
+    <a routerLink="/about"
+       class="border border-forest-700 hover:border-forest-600 transition px-6 py-3 rounded-xl">
+       About Me
+    </a>
   </div>
-</div>
+
+</section>
+
+
+<!-- Skills Preview Section -->
+<section class="px-8 py-20 max-w-5xl mx-auto border-t border-forest-800">
+
+  <h2 class="text-3xl font-bold mb-10 text-forest-600">
+    Core Technologies
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-forest-800 p-6 rounded-2xl">
+      <h3 class="font-semibold text-xl mb-3">Frontend</h3>
+      <p class="text-forest-200">
+        Angular, TypeScript, Tailwind CSS, Reactive Architecture
+      </p>
+    </div>
+
+    <div class="bg-forest-800 p-6 rounded-2xl">
+      <h3 class="font-semibold text-xl mb-3">Backend / Cloud</h3>
+      <p class="text-forest-200">
+        Firebase, Firestore, Cloud Hosting, Authentication
+      </p>
+    </div>
+
+    <div class="bg-forest-800 p-6 rounded-2xl">
+      <h3 class="font-semibold text-xl mb-3">Software Foundations</h3>
+      <p class="text-forest-200">
+        Data Structures, OOP, Scalable Architecture, Clean Code
+      </p>
+    </div>
+
+  </div>
+
+</section>
