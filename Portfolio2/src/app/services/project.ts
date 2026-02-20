@@ -6,7 +6,7 @@ import { IProject } from '../models/project.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectService {
+export class Project {
 
   private firestore = inject(Firestore);
 

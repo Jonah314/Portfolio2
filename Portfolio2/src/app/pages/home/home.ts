@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectService } from '../../services/project';
+import { Project } from '../../services/project';
 import { Observable } from 'rxjs';
 import { IProject } from '../../models/project.model';
 
@@ -12,7 +12,7 @@ import { IProject } from '../../models/project.model';
 })
 export class Home {
 
-  private projectService = inject(ProjectService);
+  private projectService = inject(Project);
 
   projects$: Observable<IProject[]> = this.projectService.getProjects();
 }

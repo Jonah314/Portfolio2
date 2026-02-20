@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { Observable } from 'rxjs';
+import { IProject } from '../../models/project.model';
+import { Project } from '../../services/project';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],   // 👈 THIS IS THE FIX
   templateUrl: './projects.html',
-  styleUrl: './projects.css',
 })
 export class Projects {
 
+  private projectService = inject(Project);
+
+  projects$: Observable<IProject[]> = this.projectService.getProjects();
 }
