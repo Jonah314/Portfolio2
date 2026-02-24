@@ -1,33 +1,176 @@
 <section class="px-8 py-20 max-w-5xl mx-auto">
 
-  <h1 class="text-4xl font-bold mb-12 text-forest-600">
-    Bootcamp Experience
-  </h1>
+  <!-- Header -->
+  <div class="mb-16">
+    <h1 class="text-4xl font-bold text-forest-600 mb-4">
+      Bootcamp Experience
+    </h1>
+    <h2 class="text-2xl text-forest-200 mb-2">
+      Full Stack Development with AI
+    </h2>
+    <p class="text-forest-200">
+      18-week Live Virtual Program
+    </p>
+  </div>
 
-  <div class="space-y-10">
+  <!-- Overview -->
+  <div class="bg-forest-800 p-8 rounded-2xl mb-16">
+    <p class="text-forest-200 leading-relaxed mb-6">
+      Completed an intensive program covering modern web development
+      from fundamentals to advanced full-stack applications.
+      Gained proficiency in HTML, CSS, JavaScript, TypeScript,
+      Angular, and Firebase.
+    </p>
 
-    <div class="bg-forest-800 p-8 rounded-2xl">
-      <h2 class="text-2xl font-semibold mb-3">
-        Full Stack Development Program
-      </h2>
+    <ul class="list-disc list-inside text-forest-200 space-y-2">
+      <li>Deck of Cards App – DOM manipulation & OOP logic</li>
+      <li>Pokémon API Mini-App – External API consumption</li>
+      <li>Angular To-Do List – Routing & component architecture</li>
+      <li>Firebase Photo Book – Cloud database integration</li>
+    </ul>
+  </div>
+
+  <!-- Core Projects -->
+  <h2 class="text-3xl font-bold text-forest-600 mb-10">
+    Core Projects
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Project Card -->
+    <a href="https://jonah314.github.io/PokemonTradingCardGame/"
+       target="_blank"
+       class="bg-forest-800 p-8 rounded-2xl
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-lg hover:shadow-forest-600/30">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Pokémon Trading Card Game
+      </h3>
+
       <p class="text-forest-200">
-        Intensive training in frontend and backend development,
-        covering Angular, Firebase, database design, and deployment.
+        Interactive web application demonstrating
+        DOM manipulation and JavaScript logic.
       </p>
-    </div>
 
-    <div class="bg-forest-800 p-8 rounded-2xl">
-      <h2 class="text-2xl font-semibold mb-3">
-        Key Focus Areas
-      </h2>
-      <ul class="list-disc list-inside text-forest-200 space-y-2">
-        <li>Component-based architecture</li>
-        <li>REST APIs and cloud integration</li>
-        <li>Version control and Git workflows</li>
-        <li>Deployment strategies</li>
-      </ul>
-    </div>
+    </a>
+
+    <!-- Project Card -->
+    <a href="https://jonah314.github.io/Poke-dex/"
+       target="_blank"
+       class="bg-forest-800 p-8 rounded-2xl
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-lg hover:shadow-forest-600/30">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Poké-dex
+      </h3>
+
+      <p class="text-forest-200">
+        Consumed external APIs and displayed dynamic content.
+      </p>
+
+    </a>
 
   </div>
+
+
+
+</section>
+
+<section class="px-8 py-20 max-w-5xl mx-auto">
+
+  <h2 class="text-3xl font-bold text-forest-600 mb-12">
+    Weekly Breakdown
+  </h2>
+
+  @for (week of weeks; track week.title) {
+
+    <div class="mb-16 bg-forest-800 p-8 rounded-2xl
+                transition-all duration-300
+                hover:shadow-lg hover:shadow-forest-600/20">
+
+      <!-- Week Title -->
+      <h3 class="text-2xl font-semibold mb-6">
+        {{ week.title }}
+      </h3>
+
+      <!-- Topics -->
+      <div class="mb-6">
+        <h4 class="font-semibold mb-3 text-forest-600">
+          Topics Covered
+        </h4>
+
+        <ul class="list-disc list-inside text-forest-200 space-y-1">
+
+          @for (topic of week.topics; track topic) {
+            <li>
+              {{ topic }}
+            </li>
+          }
+
+        </ul>
+      </div>
+
+      <!-- Projects -->
+      <div>
+        <h4 class="font-semibold mb-4 text-forest-600">
+          Projects
+        </h4>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          @for (project of week.projects; track project.name) {
+
+            <div class="bg-forest-900 p-6 rounded-xl
+                        transition-all duration-300
+                        hover:-translate-y-1
+                        hover:shadow-md hover:shadow-forest-600/30">
+
+            <!-- Image -->
+                <div class="h-48 overflow-hidden">
+                <img [src]="project.image"
+                    alt="{{ project.name }}"
+                    class="w-full h-full object-cover
+                            transition-transform duration-500
+                            hover:scale-105">
+                </div>
+
+            
+              <h5 class="text-lg font-semibold mb-2">
+                {{ project.name }}
+              </h5>
+
+              <p class="text-forest-200 mb-4 text-sm">
+                {{ project.description }}
+              </p>
+
+              <div class="flex gap-6 text-sm">
+                <a [href]="project.github"
+                   target="_blank"
+                   class="text-forest-600 hover:underline">
+                   GitHub
+                </a>
+
+                <a [href]="project.live"
+                   target="_blank"
+                   class="text-forest-600 hover:underline">
+                   Live Demo
+                </a>
+              </div>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  }
 
 </section>
