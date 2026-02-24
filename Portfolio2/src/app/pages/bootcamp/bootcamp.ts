@@ -61,8 +61,41 @@ export class Bootcamp {
         name: 'Pokémon Trading Card Game',
         github: 'https://github.com/Jonah314/PokemonTradingCardGame',
         live: 'https://jonah314.github.io/PokemonTradingCardGame/',
-        image: 'assets/images/pokemon-tcg-app',
+        image: 'assets/images/pokemon-tcg-app.png',
         description: 'For this project, I built a 1999 classic Pokémon card game using HTML, CSS, and JavaScript, focusing on object-oriented programming principles. The core requirement was to create a deck of cards using classes, where the deck contains an array of card objects and includes shuffle and draw functionality. I implemented a base Card class and extended it into child classes for Basic Pokémon cards and Energy cards. Card factory functions were used to generate new card instances, while deck factory functions were responsible for assembling complete decks. Each deck supports shuffling and drawing cards. After building a deck, cards are assigned to a Player object. To support gameplay mechanics, I created seven arrays representing the required board spaces in the Pokémon card game, allowing cards to be organized and managed during play. This project demonstrates class inheritance, factory patterns, and game-state management in JavaScript.'
+      }
+    ]
+  },
+  {
+    title: 'Week 3',
+    topics: [
+      'ES6+ key features(let/const, arrow functions)',
+      'Arrays, Objects',
+      'Recap, Function contructors New Keyword',
+
+    ],
+    projects: [
+      {
+        name: 'Basic Array Algorithms',
+        github: 'https://github.com/Jonah314/basicArrayAlgorithms',
+        live: '',
+        image: '',
+        description: 'This assignment practices core array manipulation in JavaScript by implementing functions to reverse arrays, replace values, modify all elements, remove the first item, find the largest number, count value frequency, and extract even numbers without using built-in methods.'
+      }
+    ]
+  },
+  {
+    title: 'Week 4',
+    topics: [
+      'promises',
+    ],
+    projects: [
+      {
+        name: 'Poke-dex',
+        github: 'https://github.com/Jonah314/Poke-dex',
+        live: 'http://jonah314.github.io./Poke-dex/',
+        image: 'assets/images/PokeDexScreenshot.png',
+        description: 'This project uses the Pokémon API to fetch and display Pokémon data based on user input. It features an input box and submit button where users enter a Pokémon’s name. Upon submission, the application connects to the API, retrieves the relevant data, and dynamically updates the DOM to display the Pokémon’s image and name.'
       }
     ]
   }
