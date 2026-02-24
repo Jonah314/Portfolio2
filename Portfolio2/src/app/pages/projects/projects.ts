@@ -8,7 +8,7 @@ import { Project } from '../../services/project';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],   // 👈 THIS IS THE FIX
+  imports: [CommonModule], 
   templateUrl: './projects.html',
 })
 export class Projects {
