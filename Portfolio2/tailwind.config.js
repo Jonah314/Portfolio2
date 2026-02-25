@@ -13,6 +13,10 @@ module.exports = {
           600: "#2E7D32",
           100: "#E8F5E9",
           200: "#A5D6A7",
+        },
+        base: {
+          950: "#0A0F0C",  // near-black green tint
+          900: "#0F1412"
         }
       }
     },
