@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Project } from '../../services/project';
 import { Observable } from 'rxjs';
 import { IProject } from '../../models/project.model';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-home',

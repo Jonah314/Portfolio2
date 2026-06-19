@@ -26,7 +26,7 @@
       <li>Deck of Cards App – DOM manipulation & OOP logic</li>
       <li>Pokémon API Mini-App – External API consumption</li>
       <li>Angular To-Do List – Routing & component architecture</li>
-      <li>Firebase Photo Book – Cloud database integration</li>
+      <li>National Parks App – Cloud database integration</li>
     </ul>
   </div>
 
@@ -74,6 +74,45 @@
 
     </a>
 
+    
+    <!-- Project Card -->
+    <a href="https://jonah314.github.io/PokemonTradingCardGame/"
+       target="_blank"
+       class="bg-base-950 p-8 rounded-2xl
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-lg hover:shadow-forest-600/30">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Pokémon Trading Card Game
+      </h3>
+
+      <p class="text-forest-200">
+        Interactive web application demonstrating
+        DOM manipulation and JavaScript logic.
+      </p>
+
+    </a>
+
+    <!-- Project Card -->
+    <a href="https://jonah314.github.io/Poke-dex/"
+       target="_blank"
+       class="bg-base-950 p-8 rounded-2xl
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-lg hover:shadow-forest-600/30">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Poké-dex
+      </h3>
+
+      <p class="text-forest-200">
+        Consumed external APIs and displayed dynamic content.
+      </p>
+
+    </a>
+
+
   </div>
 
 
@@ -85,98 +124,100 @@
   <h2 class="text-3xl font-bold text-forest-600 mb-12">
     Weekly Breakdown
   </h2>
+<div class="bg-base-900 p-8 rounded-2xl mb-16">
 
-  @for (week of weeks; track week.title) {
+    <h2 class="text-xl font-semibold mb-2">Week 1: HTML & CSS Fundamentals</h2>
+    <p class="mb-6 text-forest-200">
+        Learned the foundations of web development, including HTML document structure, semantic elements, CSS selectors, the box model, typography, colors, Flexbox, and CSS Grid for responsive layouts.
+    </p>
 
-    <div class="mb-16 bg-base-900 p-8 rounded-2xl
-                transition-all duration-300
-                hover:shadow-lg hover:shadow-forest-600/20">
+    <h2 class="text-xl font-semibold mb-2">Week 2: JavaScript Fundamentals</h2>
+    <p class="mb-6 text-forest-200">
+        Developed a strong understanding of JavaScript basics, including variables, data types, operators, control flow, functions, arrays, objects, and DOM manipulation for creating interactive web pages.
+    </p>
 
-      <!-- Week Title -->
-      <h3 class="text-2xl font-semibold mb-6">
-        {{ week.title }}
-      </h3>
+    <h2 class="text-xl font-semibold mb-2">Week 3: Advanced JavaScript I</h2>
+    <p class="mb-6 text-forest-200">
+        Explored modern JavaScript (ES6+) features including let/const, arrow functions, constructors, the <code>new</code> keyword, and object-oriented programming with classes. Applied these concepts by building a Deck of Cards application.
+    </p>
 
-      <!-- Topics -->
-      <div class="mb-6">
-        <h4 class="font-semibold mb-3 text-forest-600">
-          Topics Covered
-        </h4>
+    <h2 class="text-xl font-semibold mb-2">Week 4: Advanced JavaScript II</h2>
+    <p class="mb-6 text-forest-200">
+        Learned asynchronous programming concepts such as callbacks, Promises, async/await, API integration with Fetch, and error handling. Built a Pokémon API application to practice working with external data sources.
+    </p>
 
-        <ul class="list-disc list-inside text-forest-200 space-y-1">
+    <h2 class="text-xl font-semibold mb-2">Week 5: Introduction to TypeScript</h2>
+    <p class="mb-6 text-forest-200">
+        Studied TypeScript fundamentals, including compiler setup, tsconfig configuration, type inference, primitive and complex types, union types, typed functions, arrays, and object typing.
+    </p>
 
-          @for (topic of week.topics; track topic) {
-            <li>
-              {{ topic }}
-            </li>
-          }
+    <h2 class="text-xl font-semibold mb-2">Week 6: Advanced TypeScript</h2>
+    <p class="mb-6 text-forest-200">
+        Expanded TypeScript knowledge through interfaces, type aliases, classes, generics, and advanced type-safe programming concepts that prepared the foundation for Angular development.
+    </p>
 
-        </ul>
-      </div>
+    <h2 class="text-xl font-semibold mb-2">Week 7: Angular Fundamentals</h2>
+    <p class="mb-6 text-forest-200">
+        Learned Angular architecture, components, templates, data binding, modules, event handling, directives, pipes, lifecycle hooks, and component communication techniques.
+    </p>
 
-      <!-- Projects -->
-      <div>
-        <h4 class="font-semibold mb-4 text-forest-600">
-          Projects
-        </h4>
+    <h2 class="text-xl font-semibold mb-2">Week 8: Modern Angular Syntax</h2>
+    <p class="mb-6 text-forest-200">
+        Worked with Angular's modern control flow syntax and compared it to legacy approaches to improve application readability, maintainability, and performance.
+    </p>
 
-        <div class="grid md:grid-cols-2 gap-6">
+    <h2 class="text-xl font-semibold mb-2">Week 9: Intermediate Angular Development</h2>
+    <p class="mb-6 text-forest-200">
+        Implemented Angular routing and navigation, parent-child communication using Input and Output decorators, services, dependency injection, and introductory state management patterns.
+    </p>
 
-          @for (project of week.projects; track project.name) {
+    <h2 class="text-xl font-semibold mb-2">Week 10: Advanced Angular Development</h2>
+    <p class="mb-6 text-forest-200">
+        Built dynamic Angular applications using reactive and template-driven forms, validation, HTTPClient, Observables, asynchronous data handling, and Angular Signals. Completed a To-Do List application project.
+    </p>
 
-            <div class="bg-forest-900 p-6 rounded-xl
-                        transition-all duration-300
-                        hover:-translate-y-1
-                        hover:shadow-md hover:shadow-forest-600/30"
-                        [class.md:col-span-2]="week.projects.length === 1">
+    <h2 class="text-xl font-semibold mb-2">Week 11: Angular Testing</h2>
+    <p class="mb-6 text-forest-200">
+        Learned software testing methodologies using Jasmine, including unit testing, asynchronous testing, HTTP request testing, Test-Driven Development (TDD), integration testing, and end-to-end testing concepts.
+    </p>
 
-            <!-- Image -->
-                @if(project.image){
-                <div class="h-48 overflow-hidden">
-                    
-                    <img [src]="project.image"
-                    alt="{{ project.name }}"
-                    class="w-full h-full object-cover
-                            transition-transform duration-500
-                            hover:scale-105">
-                    
-                </div>
-                }
+    <h2 class="text-xl font-semibold mb-2">Week 12: AI-Assisted Development</h2>
+    <p class="mb-6 text-forest-200">
+        Utilized AI tools such as ChatGPT, Claude, and Gemini to improve coding productivity, automate repetitive tasks, accelerate development workflows, and generate comprehensive unit tests.
+    </p>
 
-            
-              <h5 class="text-lg font-semibold mb-2">
-                {{ project.name }}
-              </h5>
+    <h2 class="text-xl font-semibold mb-2">Week 13: Firebase Fundamentals</h2>
+    <p class="mb-6 text-forest-200">
+        Integrated Firebase with Angular applications, learning AngularFire setup, Firestore database concepts, collections, documents, and cloud-hosted data management techniques.
+    </p>
 
-              <p class="text-forest-200 mb-4 text-sm">
-                {{ project.description }}
-              </p>
+    <h2 class="text-xl font-semibold mb-2">Week 14: Advanced Firebase</h2>
+    <p class="mb-6 text-forest-200">
+        Implemented Firebase Storage, Hosting, Deployment, Cloud Functions, and AI-powered functionality using Gemini through Firebase AI Logic. Built and deployed a Photo-Book application.
+    </p>
 
-              <div class="flex gap-6 text-sm">
-                <a [href]="project.github"
-                   target="_blank"
-                   class="text-forest-600 hover:underline">
-                   GitHub
-                </a>
-                @if(project.live){
-                <a [href]="project.live"
-                   target="_blank"
-                   class="text-forest-600 hover:underline">
-                   Live Demo
-                </a>
-                }
-              </div>
+    <h2 class="text-xl font-semibold mb-2">Week 15: Authentication & Security</h2>
+    <p class="mb-6 text-forest-200">
+        Developed secure authentication systems using Firebase Authentication, implementing email/password login, social authentication providers, authorization rules, and security best practices.
+    </p>
 
-            </div>
+    <h2 class="text-xl font-semibold mb-2">Week 16: Capstone Project Development</h2>
+    <p class="mb-6 text-forest-200">
+        Designed, planned, and developed a full-stack capstone project by integrating Angular, TypeScript, Firebase services, authentication, APIs, and deployment workflows into a production-ready application.
+    </p>
 
-          }
+    <h2 class="text-xl font-semibold mb-2">Week 17: Technical Interview Preparation</h2>
+    <p class="mb-6 text-forest-200">
+        Practiced algorithmic problem-solving and array-based coding challenges, focusing on logical thinking, coding efficiency, debugging skills, and technical interview readiness.
+    </p>
 
-        </div>
+    <h2 class="text-xl font-semibold mb-2">Week 18: Professional Development & Career Preparation</h2>
+    <p class="mb-6 text-forest-200">
+        Strengthened Git and version control skills, continued algorithm practice, refined résumé and portfolio materials, and prepared for technical interviews and software development careers.
+    </p>
 
-      </div>
-
-    </div>
-
-  }
+</div>
+  
+ 
 
 </section>
